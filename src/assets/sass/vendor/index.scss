@@ -1,0 +1,14 @@
+@import "../../../../node_modules/angular-auto-complete/angular-auto-complete";
+@import "../../../../node_modules/ng-dialog/css/ngDialog";
+@import "../../../../node_modules/ng-dialog/css/ngDialog-theme-default";
+@import "../../../../dist/css/iconmoon";
+@import "font-awesome-4.7.0/font-awesome";
+
+.auto-complete-container {
+  color: black;
+  ul.auto-complete-results {
+    li.auto-complete-item {
+      background-color: green;
+    }
+  }
+}

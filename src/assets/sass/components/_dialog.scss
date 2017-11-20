@@ -1,0 +1,40 @@
+.weiss-dialog {
+  .ngdialog-content{
+    animation: ngdialog-flyin .5s;
+    background: #1c1c1e !important;
+    width: 80vw !important;
+  }
+
+  .weiss-dialog-content {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    padding: 4vw;
+
+    @include desktop{
+      flex-direction: row;
+    }
+
+    .info {
+      padding: 0 2vw;
+
+      h4 {
+        font-size: 2em;
+      }
+      dl {
+        margin-top: 15vh;
+
+        dt {
+          font-weight: 600;
+          float: left;
+          clear: left;
+          margin-right: 5px
+        }
+
+        dd {
+          margin-left: 0px;
+        }
+      }
+    }
+  }
+}

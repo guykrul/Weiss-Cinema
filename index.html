@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="dist/css/style.min.css">
+</head>
+<body data-ng-app="weiss-cinema">
+    <header>
+        <h1><span class="icon-weiss-clapboard"></span>WEISS CINEMA</h1>
+        <nav>
+            <a data-ui-sref="wishlist" data-ui-sref-opts="{reload: true}">Wishlist</a>
+        </nav>
+    </header>
+    <main data-ng-controller="MainCtrl as main" class="loading" data-remove-loader>
+        <i class="fa fa-spinner fa-spin fa-3x fa-fw" ng-if="false"></i>
+        <div id="search-container" ng-controller="SearchCtrl as search">
+            <div id="search-bar">
+                <label for="movie-search"><i class="fa fa-search"></i></label>
+                <input type="search" id="movie-search" name="movie-search" placeholder="Search for a movie" data-ng-model="search.term" data-auto-complete="search.autoCompleteOptions" />
+            </div>
+        </div>
+        <div id="title-wrapper">
+            <h2>{{main.title}}</h2>
+        </div>
+        <div data-ui-view="movies"></div>
+    </main>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="dist/js/weiss-cinema.min.js"></script>
+</body>
+</html>

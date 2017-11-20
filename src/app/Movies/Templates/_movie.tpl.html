@@ -1,0 +1,11 @@
+<div class="movie" data-ng-style="movie.Poster != 'N/A' && {'background-image':'url('+ movie.Poster + ')'} || {'background-image': 'url(dist/images/NoPicAvailable.png)'}">
+    <div class="movie-data">
+        <div class="wishlist">
+            <i data-wishlist="{movie}" class="fa fa-heart-o"></i>
+        </div>
+        <div class="movie-info" data-full-film>
+            <h3>{{movie.Title}}</h3>
+            {{movie.Year}}
+        </div>
+    </div>
+</div>

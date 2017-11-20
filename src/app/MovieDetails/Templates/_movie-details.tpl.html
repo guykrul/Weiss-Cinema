@@ -1,0 +1,14 @@
+<div class="weiss-dialog-content">
+    <img data-ng-src="{{movie.details.Poster !== 'N/A' ? movie.details.Poster : 'dist/images/NoPicAvailable.png'}}" alt="">
+    <div class="info">
+        <div class="top">
+            <h4>{{movie.details.Title}}</h4>
+            <span>{{movie.details.Year}}</span>
+        </div>
+        <dl>
+            <dt data-ng-repeat-start="(key, value) in movie.detailslList">{{key}}:</dt>
+            <dd data-ng-repeat-end>{{value}}</dd>
+        </dl>
+
+    </div>
+</div>

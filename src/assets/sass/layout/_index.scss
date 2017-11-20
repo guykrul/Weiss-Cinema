@@ -1,0 +1,11 @@
+@import "header";
+@import "pages/index";
+
+body{
+  background: black;
+  color: white;
+
+  @include tablet{
+    padding: 0 10vw;
+  }
+}

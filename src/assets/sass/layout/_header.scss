@@ -1,0 +1,23 @@
+header {
+  color: red;
+  display: flex;
+  justify-content: space-between;
+  padding: 5vw;
+
+  @include tablet {
+    padding: 5vw 0;
+  }
+
+  h1{
+    span{
+      margin-right: 10px;
+    }
+  }
+
+  nav {
+    a{
+      color: red;
+    }
+  }
+
+}

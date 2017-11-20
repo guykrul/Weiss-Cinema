@@ -1,0 +1,56 @@
+{
+  "name": "weiss-cinema",
+  "version": "1.0.0",
+  "description": "Home assignment for full-stack position at \"Weissbeerger\" company",
+  "main": "src/app/app.js",
+  "scripts": {
+    "start": "budo src/bundle.js --live",
+    "build": "browserify src/app/app.js --debug -o src/bundle.js",
+    "production": "browserify src/app/app.js -o | uglifyjs > dist/js/weiss-cinema.min.js",
+    "watch": "watchify src/app/app.js  --debug -o src/bundle.js"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-ng-html2js",
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        },
+        "browserify-css"
+      ]
+    ]
+  },
+  "author": "Guy Krul",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^8.0.0",
+    "browserify": "^14.4.0",
+    "browserify-css": "^0.13.1",
+    "browserify-ng-html2js": "^1.3.0",
+    "budo": "^10.0.4",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "uglify-js": "^3.1.9",
+    "watchify": "^3.9.0"
+  },
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.6",
+    "angular": "^1.6.6",
+    "angular-auto-complete": "^1.4.3",
+    "angular-local-storage": "^0.7.1",
+    "angular-sanitize": "^1.6.6",
+    "jquery": "^3.2.1",
+    "ng-dialog": "^1.4.0"
+  }
+}
